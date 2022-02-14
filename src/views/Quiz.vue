@@ -3,19 +3,18 @@
     <div class="container">
       <h1 class="quizName">{{quiz.name}}</h1>
       <h2 v-if="completed && !start" >You scored {{quiz.userScore}} / {{quiz.questions.length}}</h2>
-      <button @click="testquest()">TEST</button>
       <button class="btn btn-primary start" @click="startQuiz()" v-if="!start">Start</button>
       <div class="col" v-if="start">
         <div class="row">
           <h2>{{userQuiz.quiz.questions[currentQuestion].question}}</h2>
           <ul>
-            <li class="answer" v-for="answer in userQuiz.quiz.questions[currentQuestion].answers" :key="answer.id" @click="setAnswer(userQuiz.quiz.questions[currentQuestion], answer.answer)">
+            <li class="answer list-group-item" v-for="answer in userQuiz.quiz.questions[currentQuestion].answers" :key="answer.id" @click="setAnswer(userQuiz.quiz.questions[currentQuestion], answer.answer)">
               <span >
                 {{answer.answer}}
               </span>
             </li>
           </ul>
-         <button class="btn btn-primary" @click="currentQuestion--" v-if="currentQuestion>0">Previous</button>
+         <button class="btn btn-primary back" @click="currentQuestion--" v-if="currentQuestion>0">Previous</button>
          
         </div>
       </div>
@@ -88,22 +87,24 @@ font-family: 'PT Mono';
   text-align: center;
 }
 .answer {
-    border-radius: 25px;
-    max-height: 200px;
-    min-height: 180px;
-    max-width: 50%;
-    min-width: 150px;
-    background-clip: padding-box;
-    border: 10px solid transparent;
-    background-color: #bdbdbd;
-    text-align: center;
-    display:table-cell;
+    min-height: 50%;
     font-family: 'Poppins', sans-serif;
-    display: block;
+   
 
 }
 .answer:hover {
    background-color: aqua;
+}
+.back {
+  position: absolute;
+  max-width: 35%;
+  left: 0;
+  bottom: 0;
+}
+.start {
+  min-height: 350px;
+  min-width: 350px;
+  font-size: 300%;
 }
 @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;700&display=swap');
 </style>

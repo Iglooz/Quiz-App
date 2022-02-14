@@ -16,7 +16,7 @@
         />
         <br />
         <input type="text" v-model="answer" placeholder="Answer" />
-        <button @click="addAnswer" class="btn btn-primary">Add Answer</button>
+        <button @click="addAnswer" class="btn btn-secondary">Add Answer</button>
       </div>
       <div>
         <h2>Question: {{ this.question }}</h2>
@@ -31,7 +31,7 @@
         </ul>
       </div>
       <div>
-        <button @click="addQuestion">Add Question</button>
+        <button class="btn btn-secondary" @click="addQuestion">Add Question</button>
       </div>
       <div class="col">
         <h1>{{ quiz.name }}</h1>

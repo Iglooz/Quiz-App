@@ -2,9 +2,8 @@
   <div>
     <div class="container">
       <h1>{{userQuiz.quiz.name}}</h1>
-      <p>Name</p>
       <input class="editCorrectAnswer" type="text" v-model="newQuiz.name">
-      <button @click="testquest()">TEST</button>
+      
       
       <div class="col">
         <div class="row">

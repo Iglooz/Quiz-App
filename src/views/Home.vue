@@ -4,7 +4,7 @@
       <!--Prompts the user to input a name and disappears once nameSubmitted is true-->
       <div v-if="!isSubmitted">
         <div class="row">
-          <div class="col">
+          <div class="col" >
             <h1 class="greeting">Welcome to the quiz zone. Please enter your name below</h1>
           </div>
         </div>
@@ -87,7 +87,6 @@ export default {
 }
 .nameinput {
   max-width: 50%;
-  align-content: center ;
 }
 .greeting {
   font-size: 300%;

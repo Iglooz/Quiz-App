@@ -5,7 +5,6 @@
     color="darkgrey"
     dark>
     <router-link v-bind:to="'/'">Home</router-link>
-    <router-link v-bind:to="'About'">About</router-link>
     </v-app-bar>
     <v-main class="main">
       <router-view/>
